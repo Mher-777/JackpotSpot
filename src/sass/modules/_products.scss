@@ -1,0 +1,22 @@
+.products {
+  background-color: var(--color-bg);
+  padding: 1.6rem 1.6rem 4.8rem;
+  border-radius: 3.2rem 3.2rem 0 0;
+  margin-top: -3.2rem;
+  position: relative;
+  z-index: 1;
+
+  &__top {
+    margin-bottom: 1.6rem;
+    color: var(--color-white);
+    padding: 1rem;
+  }
+
+  &__items {
+    gap: 1.6rem;
+
+    @include large-tablet {
+      gap: .8rem;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.cookie {
+  max-width: 55rem;
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+  background-color: #FAF7F2;
+  border-radius: 2.4rem;
+  right: .8rem;
+  bottom: .8rem;
+  padding: 1.6rem;
+
+  @include large-mobile {
+    max-width: 37.7rem;
+  }
+
+  &__inner {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__image {
+    width: 12rem;
+    flex-shrink: 0;
+
+    @include large-mobile {
+      width: 6.4rem;
+    }
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 500;
+    letter-spacing: -0.096rem;
+    margin-bottom: .7rem;
+  }
+
+  &__text {
+    @include line-height(12, 14);
+    opacity: 0.8;
+  }
+
+  &__bottom {
+    margin-top: 2rem;
+
+    @include large-mobile {
+      margin-left: -8rem;
+    }
+  }
+
+  &__btn {
+   @include large-mobile {
+
+     width: calc(50% - .6rem);
+   }
+  }
+}

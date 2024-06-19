@@ -1,0 +1,49 @@
+.service-item {
+  border-radius: 1.6rem;
+  background: #FAF7F2;
+  padding: 2.4rem;
+
+  @include large-mobile {
+    padding-left: 12rem;
+    position: relative;
+  }
+
+  &__image {
+    width: 16rem;
+    height: 16rem;
+    position: relative;
+    margin-bottom: 1rem;
+
+    @include large-mobile {
+      width: 8.8rem;
+      height: 8.8rem;
+      margin-bottom: 0;
+      position: absolute;
+      left: 1.6rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__title {
+    font-size: 3.2rem;
+    line-height: 1em;
+    font-weight: 500;
+    letter-spacing: -0.128rem;
+    margin-bottom: 1rem;
+
+    @include large-mobile {
+      font-size: 2.4rem;
+      letter-spacing: -0.096rem;
+    }
+  }
+
+  &__text {
+    opacity: 0.7;
+    letter-spacing: -0.064rem;
+
+    @include large-mobile {
+      @include line-height(14, 17);
+    }
+  }
+}

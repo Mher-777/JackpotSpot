@@ -1,0 +1,29 @@
+header.header
+    .header__inner.flex.flex_vertical.flex_justify
+        .header__logo.logo
+            a(href="./main.html").logo__link
+                img(src="app/img/logo.svg" alt="Jackpot Spot").logo__image
+        nav.header__menu.menu
+            ul.menu__list
+                li.menu__item
+                    a(href="./main.html#intro").menu__link.js-link Main
+                li.menu__item
+                    a(href="./main.html#products").menu__link.js-link Hotels List
+                li.menu__item
+                    a(href="./main.html#services").menu__link.js-link Services
+                li.menu__item
+                    a(href="./main.html#reviews").menu__link.js-link Reviews
+                li.menu__item
+                    a(href="#contacts").menu__link.js-link Contacts
+            ul.menu__list.menu__list_bottom.mobile-show
+                li.menu__item
+                    a(href="./terms.html").menu__link Terms of Service
+                li.menu__item
+                    a(href="./privacy.html").menu__link Privacy Policy
+                li.menu__item
+                    a(href="./cookie.html").menu__link Cookie Policy
+        button(type="button").header__hamburger.hamburger.js-hamburger
+            span.hamburger__close
+                +icon('close')
+            span.hamburger__open
+                +icon('menu')

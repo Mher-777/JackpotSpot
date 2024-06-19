@@ -1,0 +1,234 @@
+.product-item {
+  max-width: 100%;
+  background-color: var(--color-white);
+  border-radius: 1.6rem;
+  overflow: hidden;
+  flex: 1 1 calc(25% - 1.6rem);
+  display: flex;
+  flex-direction: column;
+
+  @include large-tablet {
+    flex: 1 1 calc(33.333333333% - .8rem);
+  }
+
+  @include large-mobile {
+    flex: 1 1 calc(50% - .8rem);
+  }
+
+  &:hover {
+    .product-item__image img {
+      transform: scale(1.1);
+    }
+    
+    .product-item__btn {
+      background-color: #FC7653;
+    }
+
+    .product-item__title {
+      color: var(--color-accent);
+    }
+  }
+
+  &_fluid {
+    flex: 1 1 calc(100% - 1.6rem);
+    display: flex;
+    flex-direction: row;
+    & > * {
+      flex: 1 1 50%;
+      max-width: 50%;
+    }
+    .product-item__image {
+      padding-top: 300 / 688 * 100%;
+      @include large-tablet {
+        padding-top: 172 / 511 * 100%;
+      }
+      @include large-mobile {
+        padding-top: 232 / 344 * 100%;
+      }
+    }
+
+    @include large-tablet {
+      flex-direction: column;
+      flex: 1 1 calc(67.333333333% - .8rem);
+      & > * {
+        flex: 1 1 auto;
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__slider {
+    height: 100%;
+  }
+
+  &__geo {
+    opacity: 0.7;
+    letter-spacing: -0.064rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    .icon {
+      width: 1.6rem;
+      height: 1.6rem;
+      fill: currentColor;
+      margin-right: .8rem;
+      margin-top: -.3rem;
+      @include large-mobile {
+        margin-right: .4rem;
+      }
+    }
+
+    @include large-mobile {
+      font-size: 1.2rem;
+      letter-spacing: -0.048rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &__content {
+    padding: .8rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__image {
+    padding-top: 220 / 330 * 100%;
+    position: relative;
+    height: 100%;
+    &::before {
+      content: '';
+      position: absolute;
+      background: linear-gradient(0deg, #262625 0%, rgba(38, 38, 37, 0.00) 100%);
+      height: 5.5rem;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+    }
+    img {
+      transform-origin: left;
+      transition: all linear .2s;
+    }
+
+    @include large-tablet {
+      padding-top: 172 / 251 * 100%;
+    }
+
+    @include large-mobile {
+      padding-top: 108 / 168 * 100%;
+    }
+  }
+
+  &__prev,
+  &__next {
+    position: absolute;
+    z-index: 1;
+    width: 50%;
+    top: 0;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  &__prev {
+    right: 0;
+  }
+
+  &__pagination {
+    bottom: 1.2rem !important;
+    padding: .8rem !important;
+    display: flex;
+    justify-content: flex-start;
+    gap: .4rem;
+    @include large-tablet {
+      bottom: .8rem !important;
+    }
+    @include large-mobile {
+      bottom: 0 !important;
+    }
+    .swiper-pagination-bullet {
+      width: 100% ;
+      background-color: var(--color-white);
+      height: .4rem;
+      border-radius: 1px !important;
+      opacity: .4;
+      transition: all linear .2s;
+      max-width: 2.4rem;
+      margin: 0 !important;
+      &-active {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__top {
+    padding: 1.6rem 0;
+    margin-bottom: .8rem;
+
+    @include large-mobile {
+      padding: .8rem 0;
+    }
+  }
+
+  &__title {
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    text-align: center;
+    transition: all linear .2s;
+  }
+
+  &__col {
+    border: .5px solid #D9D5D0;
+    padding: 1.2rem .8rem;
+    flex: 1 1 50%;
+    text-align: center;
+
+    @include large-mobile {
+      padding: .8rem;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    border: .5px solid #D9D5D0;
+    border-radius: .8rem;
+    overflow: hidden;
+    margin-top: auto;
+  }
+
+  &__number {
+    display: block;
+    font-size: 2rem;
+    letter-spacing: -0.08rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    white-space: nowrap;
+
+    @include large-mobile {
+      font-size: 1.6rem;
+      letter-spacing: -0.064rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    opacity: 0.5;
+    letter-spacing: -0.056rem;
+    display: block;
+
+    @include large-mobile {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    margin-top: .8rem;
+  }
+}

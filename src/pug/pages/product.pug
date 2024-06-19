@@ -1,0 +1,92 @@
+extends ../layouts/base
+
+append vars
+    - title = 'Страница отеля';
+
+block content
+    section.intro.flex
+        .intro__content.flex.flex_column
+            h1.title.title_large.intro__title The Star Grand
+                | <br> at The Star Gold Coast
+            h3.intro__subtitle Broadbeach, Gold Coast
+            .intro__bottom
+                +btn('#booking').intro__btn.js-modal Book a tour
+                +btn('#about')._white.intro__btn.js-link Learn more about hotel
+        .intro__images
+            img(src="/img/hotel-1-1-min.png" alt="The Star Grand at The Star Gold Coast")
+            img(src="/img/hotel-1-2-min.png" alt="The Star Grand at The Star Gold Coast")
+            img(src="/img/hotel-1-3-min.png" alt="The Star Grand at The Star Gold Coast")
+    section.about#about
+        .about__top
+            h2.title.about__title About hotel
+            .about__desc The most important information about amenities, service, food, etc.
+        .about__inner.flex
+            .about__cell
+                .about__col.about__col_fluid
+                    h3.about__subtitle Common rating:
+                    .about__rating 5.0
+                    .about__reviews Based on 1115 reviews
+                    ul.about__items
+                        li.about__item
+                            strong.about__number 5.0
+                            span Location
+                        li.about__item
+                            strong.about__number 5.0
+                            span Casino
+                        li.about__item
+                            strong.about__number 5.0
+                            span Service
+                .about__col
+                    h3.about__subtitle Hotel class:
+                    .about__star ★★★★★
+                .about__col
+                    h3.about__subtitle Website:
+                    a(href="#" target="_blank").about__link Link ↗︎
+            .about__cell
+                .about__col
+                    h3.about__subtitle Property Amenities
+                    ul.about__tags
+                        li.about__tag
+                            +icon('people')
+                            span Casino and gambling
+                        li.about__tag
+                            +icon('diamond')
+                            span Luxury suites
+                        li.about__tag
+                            +icon('clock')
+                            span Express check-in/check-out
+                        li.about__tag
+                            +icon('wifi')
+                            span Free internet
+                        li.about__tag
+                            +icon('glass')
+                            span Bar / lounge
+                        li.about__tag
+                            +icon('chefhat')
+                            span Restaurant
+                        li.about__tag
+                            +icon('bath')
+                            span SPA
+                        li.about__tag
+                            +icon('eye')
+                            span Beautiful view
+                        li.about__tag
+                            +icon('tenis')
+                            span Fitness centre with gym
+                        li.about__tag
+                            +icon('money')
+                            span Currency exchange
+                        li.about__tag
+                            +icon('parking')
+                            span Free parking
+            .about__cell
+                .about__col
+                    h3.about__subtitle Management about hotel
+                    p.about__text Freshly renovated and ideally situated on Broadbeach Island, this slice of paradise is the perfect place to combine relaxation and free-spirited fun. 596 luxurious rooms, enjoy sweeping coastal and hinterland views and kick back poolside. With award winning restaurants, a 24 hour casino and our Event Centre all within arm's reach, you have all the ingredients for a memorable stay!
+                .about__col.about__col_fluid.flex.flex_vertical.flex_justify
+                    .about__price
+                        span From:
+                        strong A$ 169.00
+                    +btn('#booking').about__btn.js-modal Book this hotel
+    include ../modules/product-reviews
+    include ../modules/contacts

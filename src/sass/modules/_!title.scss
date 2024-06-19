@@ -1,0 +1,41 @@
+.title {
+  font-size: 4.8rem;
+  line-height: 1em;
+  font-weight: 500;
+  letter-spacing: -0.192rem;
+
+  @include large-tablet {
+    font-size: 4rem;
+    letter-spacing: -0.16rem;
+  }
+
+  @include large-mobile {
+    font-size: 3.2rem;
+    letter-spacing: -0.128rem;
+  }
+
+  &_large {
+    font-size: 5.6rem;
+    letter-spacing: -0.224rem;
+
+    @include large-mobile {
+      font-size: 4.8rem;
+      letter-spacing: -0.192rem;
+    }
+  }
+
+  &_small {
+    font-size: 3.2rem;
+    letter-spacing: -0.128rem;
+
+    @include large-tablet {
+      font-size: 2.4rem;
+      letter-spacing: -0.096rem;
+    }
+
+    @include large-mobile {
+      font-size: 2rem;
+      letter-spacing: -0.08rem;
+    }
+  }
+}

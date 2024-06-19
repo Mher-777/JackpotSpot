@@ -1,0 +1,51 @@
++e.modal.mfp-hide#review(data-step-modal="#review-success")
+    .modal__top
+        h2.modal__title.title.title_medium Write a review
+    form(action="").modal__form
+        .modal__fields.flex
+            +input('Name:', '', 'name').modal__input
+            +input('Email:', 'john@example.com', 'email').modal__input
+            +textarea('Message:', '', 'message').textarea_small.modal__textarea
+        .modal__rate
+            .modal__rate-label Rating:
+            .js-rate(data-rateyo-star-width="40px" data-rateyo-full-star="true")
+        +btn(false)(type="submit")._red.modal__btn Send
+        .modal__terms.css-text-center By сlicking the “Send” button, you agree with our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+
++e.modal.mfp-hide.flex_column#review-success
+    h2.modal__title.title.title_medium Write a review
+    .modal__content
+        h3.modal__title.title.title_small Thank you, our manager will write you soon
+    +btn(false).modal__btn._red.js-close-modal Close
+
++e.modal.mfp-hide#booking(data-step-modal="#booking-success")
+    .modal__top
+        h2.modal__title.title.title_medium Hotel booking
+    form(action="").modal__form
+        .modal__fields.flex
+            +input('Name:', '', 'name').modal__input
+            +input('Email:', 'john@example.com', 'email').modal__input
+            +inputDate('Check-in Date:', 'Date', 'date_in').modal__input
+            +inputDate('Check-out Date:', 'Date', 'date_out').modal__input
+            +textarea('Message:', '', 'message').textarea_small.modal__textarea
+        .modal__bottom
+            .modal__terms By сlicking the “Book” button, you agree with our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+            +btn(false)(type="submit").modal__btn Book
+
++e.modal.mfp-hide.flex_column#booking-success
+    h2.modal__title.title.title_medium Write your review
+    .modal__content
+        h3.modal__title.title.title_small Thank you, our manager will write you soon
+    +btn(false).modal__btn._red.js-close-modal Close
+
+
+.cookie#cookiePopup(style="display: none;")
+    .cookie__inner
+        .cookie__image
+            img(src="/app/img/cookie.svg" alt="We use cookies")
+        .cookie__content
+            h2.cookie__title We use cookies
+            p.cookie__text We use cookies on our website to provide the best experience for our users and to analyze traffic. You can find out more on our “Cookie Policy” page
+            .cookie__bottom
+                +btn(false)._red.cookie__btn#acceptCookie Ok, go to site
+                +btn(false)._white.cookie__btn#rejectCookie Leave only necessary

@@ -1,0 +1,15 @@
+mixin input (label, placeholder, name, mask)
+    +e.input__(class=`${icon ? '_icon' : ''}`)
+        +e.parent
+            if(label)
+                +e.label.p !{label}
+                    +e.SPAN.placeholder !{placeholder}
+            +e.INPUT.field(name=name type="text" class=mask)&attributes(attributes)
+
+mixin inputDate (label, placeholder, name, mask)
+    +e.input__(class=`${icon ? '_icon' : ''}`)
+        +e.parent
+            if(label)
+                +e.label.p !{label}
+                    +e.SPAN.placeholder !{placeholder}
+            +e.INPUT.field(name=name type="text" class=mask onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'")&attributes(attributes)

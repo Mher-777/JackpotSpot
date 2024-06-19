@@ -1,0 +1,15 @@
+mixin select(label, icon = false, strong = false, ...items)
+    +e.select__
+        if(label)
+            +e.label.p !{label}
+        +e.parent
+            +e.SELECT.select&attributes(attributes)
+                +e.OPTION.option(value="")
+                - var count = 0;
+                each item in items
+                    - var checked = count == 0;
+                    - var icons = icon[count] ? icon[count] : false
+                    - var title = strong[count] ? strong[count] : false
+
+                    +e.OPTION.option(value=count data-icon=icons data-title=title) !{item}
+                    - count++;

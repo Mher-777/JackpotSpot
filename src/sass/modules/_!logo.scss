@@ -1,0 +1,12 @@
+.logo {
+  width: 12rem;
+
+  &__link {
+    display: inline-block;
+    width: 100%;
+    & > * {
+      width: 100%;
+      display: block;
+    }
+  }
+}

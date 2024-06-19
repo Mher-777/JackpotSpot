@@ -1,0 +1,66 @@
+-
+    var reviewsSlider = {
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        freeMode: true
+    }
+
+section.reviews#reviews
+    .reviews__top
+        h2.title.reviews__title Latest reviews on JackpotSpot®
+        .reviews__desc Guest reviews about special service provided by us
+    .reviews__slider.swiper.js-slider(data-settings=reviewsSlider)
+        .swiper-wrapper
+            .swiper-slide
+                .review-item
+                    .review-item__top.flex.flex_vertical
+                        .review-item__pic
+                            img(src="/img/user-1.png" alt="Liam S.").object-fit
+                        .review-item__info
+                            strong.review-item__name Liam S.
+                            span.review-item__date February, 2024
+                    .review-item__content
+                        p "Booking through JackpotSpot was seamless and convenient, and the selection of top hotels with casinos in Australia was impressive. I found the perfect combination of luxury and entertainment for my next trip."
+            .swiper-slide
+                .review-item
+                    .review-item__top.flex.flex_vertical
+                        .review-item__pic
+                            img(src="/img/user-2.png" alt="Elaina K.").object-fit
+                        .review-item__info
+                            strong.review-item__name Elaina K.
+                            span.review-item__date February, 2024
+                    .review-item__content
+                        p "JackpotSpot made planning my casino getaway a breeze! Their user-friendly interface and comprehensive listings of Australia's top hotels with casinos helped me find the ideal accommodations for my preferences.”
+            .swiper-slide
+                .review-item
+                    .review-item__top.flex.flex_vertical
+                        .review-item__pic
+                            img(src="/img/user-3.png" alt="Gwyneth M.").object-fit
+                        .review-item__info
+                            strong.review-item__name Gwyneth M.
+                            span.review-item__date January, 2024
+                    .review-item__content
+                        p "I highly recommend JackpotSpot for anyone looking to book a casino hotel in Australia. Their website offers a wide range of options, and their customer service team was helpful and responsive throughout the booking process.”
+            .swiper-slide
+                .review-item
+                    .review-item__top.flex.flex_vertical
+                        .review-item__pic
+                            img(src="/img/user-4.png" alt="Jaxon W.").object-fit
+                        .review-item__info
+                            strong.review-item__name Jaxon W.
+                            span.review-item__date December, 2023
+                    .review-item__content
+                        p "Thanks to JackpotSpot, I was able to find the perfect hotel with a casino for my upcoming vacation. Their platform made it easy to compare prices, amenities, and locations, ensuring that I got the best deal possible.”
+            .swiper-slide
+                .review-item
+                    .review-item__top.flex.flex_vertical
+                        .review-item__pic
+                            img(src="/img/user-5.png" alt="Zhou X.").object-fit
+                        .review-item__info
+                            strong.review-item__name Zhou X.
+                            span.review-item__date November, 2023
+                    .review-item__content
+                        p "I had a fantastic experience using JackpotSpot to book my stay at a casino hotel in Australia. Their website is intuitive, their listings are comprehensive, and their prices are competitive. I'll definitely be using them for future bookings!”
+    .reviews__bottom.flex.flex_vertical.flex_center
+        +btn('#products').reviews__btn.js-link Back to Hotels list
+        +btn('#review')._black.reviews__btn.js-modal Write a review

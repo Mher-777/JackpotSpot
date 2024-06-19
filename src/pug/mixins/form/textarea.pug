@@ -1,0 +1,7 @@
+mixin textarea (label, placeholder, name)
+    +e.textarea__(class=`${icon ? '_icon' : ''}`)
+        +e.parent
+            if (label)
+                +e.label.p !{label}
+                    +e.SPAN.placeholder !{placeholder}
+            +e.TEXTAREA.field(name=name)&attributes(attributes)

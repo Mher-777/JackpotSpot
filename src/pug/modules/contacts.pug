@@ -1,0 +1,19 @@
+.contacts#contacts
+    .contacts__inner.flex
+        .contacts__content
+            .contacts__top
+                h2.title.contacts__title Get in touch with us
+                .contacts__desc Reach out to us: contact information, assistance, and inquiries
+            .contacts__info
+                .contacts__desc Company info, address, contacts:
+                ul.contacts__items
+                    li.contacts__item JackpotSpot LLC <br> Australia
+                    li.contacts__item 5064, 81 Woolnough <br> Road, Urrbrae
+                    li.contacts__item +61 (08) 8351 5849 LLC <br> hello@jackpotspot.com
+        form(action="" data-step-modal="").contacts__form
+            .contacts__fields
+                +input('Name:', '', 'name')(tabindex="1" required).contacts__field
+                +textarea('Message:', '', 'message')(tabindex="3").contacts__textarea
+                +input('Email:', 'email@example.com', 'email')(tabindex="2" required).contacts__field
+            +btn()(type="submit").contacts__btn Send
+            .contacts__terms By clicking the “Send” button, you agree with our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>

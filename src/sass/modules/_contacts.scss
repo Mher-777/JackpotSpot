@@ -1,0 +1,156 @@
+.contacts {
+  padding: 6rem 4rem;
+  @include large-tablet {
+    padding: 6rem 1.6rem;
+  }
+  @include large-mobile {
+    padding: 3rem 1.4rem;
+  }
+  &__inner {
+    gap: 6rem;
+    @include large-tablet {
+      gap: 3rem;
+    }
+    @include large-mobile {
+      display: block;
+    }
+    & > * {
+      flex: 1 1 calc(50% - 6rem);
+
+      @include large-tablet {
+        flex: 1 1 calc(50% - 3rem);
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__desc {
+    font-size: 2.4rem;
+    letter-spacing: -0.096rem;
+    opacity: 0.7;
+
+    @include large-mobile {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__top {
+    @include large-mobile {
+      text-align: center;
+    }
+  }
+
+  &__info {
+    margin-top: auto;
+    .contacts__desc {
+      @include large-mobile {
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 2.5rem;
+      }
+    }
+  }
+
+  &__items {
+    margin-top: 1rem;
+    opacity: 0.5;
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    letter-spacing: -0.064rem;
+
+    @include large-tablet {
+      display: block;
+    }
+
+    @include large-mobile {
+      display: flex;
+      font-size: 1.2rem;
+      justify-content: space-evenly;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__item {
+    @include large-tablet {
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    @include large-mobile {
+      white-space: nowrap;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  &__fields {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.2rem;
+    grid-row-gap: 1.2rem;
+
+    & > * {
+      &:nth-child(0) {
+        grid-row-start: 1;
+        grid-column-start: 1;
+
+        grid-row-end: 2;
+        grid-column-end: 2;
+      }
+      &:nth-child(1) {
+        grid-row-start: 2;
+        grid-column-start: 1;
+
+        grid-row-end: 3;
+        grid-column-end: 2;
+      }
+      &:nth-child(2) {
+        grid-row-start: 1;
+        grid-column-start: 2;
+
+        grid-row-end: 3;
+        grid-column-end: 3;
+      }
+    }
+
+    @include large-tablet {
+      display: flex;
+      flex-direction: column;
+
+      & > * {
+        &:nth-child(2) {
+          order: 1;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    margin-top: 2.4rem;
+  }
+
+  &__terms {
+    opacity: 0.5;
+    @include line-height(14, 17);
+    letter-spacing: -0.056rem;
+    margin-top: 2.4rem;
+    text-align: center;
+
+    a {
+      &:hover {
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+include ../mixins/mixin-loader.pug
+
+block vars
+	-
+		var title = title || 'Jackpot Spot - Your Ultimate Destination for Big Wins!'
+		var description = description || 'Join Jackpot Spot for thrilling games, massive jackpots, and the best online casino experience. Play now and hit the big time!'
+		var image = image || ''
+	-
+		var html = {
+			attrs: {
+				lang: 'ru'
+			},
+			classList: []
+		}
+	-
+		var body = {
+			attrs: {},
+			classList: []
+		}
+	-
+		var meta = {
+			charset: 'utf-8',
+			description: description,
+			keywords: 'jackpot, casino, online casino, big wins, slots, poker, gambling, play online, casino games',
+			author: 'Jackpot Spot',
+			ogTitle: title,
+			viewport: 'width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1',
+			XUACompatible: 'IE=edge'
+		}
+	-
+		var link = {
+			icon: '',
+			icon16x16: '',
+			icon32x32: '',
+		}
+
+doctype html
+html(class=html.classList)&attributes(html.attrs)
+	head
+		block head-start
+		block meta
+			if meta.charset
+				meta(charset=meta.charset)
+			if meta.XUACompatible
+				meta(http-equiv="X-UA-Compatible" content=meta.XUACompatible)
+			if meta.viewport
+				meta(name="viewport" content=meta.viewport)
+			if meta.description
+				meta(name="description" content=meta.description)
+			if meta.keywords
+				meta(name="keywords" content=meta.keywords)
+			if meta.author
+				meta(name="author" content=meta.author)
+		title
+			= title
+		block links
+			link(rel="stylesheet" href="./css/app.css?v=" + Date.now())
+			link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png")
+			link(rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png")
+			link(rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png")
+			link(rel="manifest" href="/site.webmanifest")
+			link(rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5")
+			script.
+				function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
+		block head-end
+	body(class=body.classList)&attributes(body.attrs)
+		block body-start
+
+		block header
+			include header
+		block content
+		block footer 
+			include footer
+		block popup 
+			include modals
+
+		block scripts
+			script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js")
+			script(src="./js/app.js?v=" + Date.now())
+				
+		block body-end

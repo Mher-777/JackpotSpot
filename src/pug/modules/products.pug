@@ -1,0 +1,196 @@
+-
+    var productSlider = {
+        navigation: {
+            nextEl: ".product-item__prev",
+            prevEl: ".product-item__next",
+        },
+        pagination: {
+            el: '.product-item__pagination',
+            clickable: true
+        }
+    }
+section.products#products
+    .products__top.flex.flex_vertical.flex_justify
+        h2.title.products__title Hotels list
+        +select(false, false, false, 'Rating (ascending)', 'Rating (descending)', 'Alphabet (ascending)', 'Alphabet (descending)')(data-placeholder="Sort: by Rating").js-select.products__dropdown
+    .products__items.flex
+        .product-item.product-item_fluid
+            .product-item__gallery
+                .product-item__slider.swiper.js-slider(data-settings=productSlider)
+                    .swiper-wrapper
+                        .swiper-slide
+                            .product-item__image
+                                img(src="/img/hotel-1-1-min.png" alt="JW Marriott Parq Vancouver").object-fit
+                        .swiper-slide
+                            .product-item__image
+                                img(src="/img/hotel-1-2-min.png" alt="JW Marriott Parq Vancouver").object-fit
+                        .swiper-slide
+                            .product-item__image
+                                img(src="/img/hotel-1-3-min.png" alt="JW Marriott Parq Vancouver").object-fit
+                        .swiper-slide
+                            .product-item__image
+                                img(src="/img/hotel-1-4-min.png" alt="JW Marriott Parq Vancouver").object-fit
+                    .swiper-pagination.product-item__pagination
+                    .swiper-button-prev.product-item__prev
+                    .swiper-button-next.product-item__next
+            .product-item__content
+                .product-item__top
+                    span.product-item__geo
+                        +icon('map')
+                        | Vancouver, British Columbia
+                    a(href="#").product-item__title.title.title_small JW Marriott Parq Vancouver
+                .product-item__info
+                    .product-item__col
+                        strong.product-item__number 4.98
+                        span.product-item__text Rating
+                    .product-item__col
+                        strong.product-item__number 2390
+                        span.product-item__text Reviews
+                    .product-item__col
+                        strong.product-item__number A$ 169.00
+                        span.product-item__text Per night
+                +btn('./product.html').product-item__btn Learn more
+        .product-item
+            .product-item__gallery
+                .product-item__slider.swiper.js-slider(data-settings=productSlider)
+                    .swiper-wrapper
+                        .swiper-slide
+                            .product-item__image
+                                img(src="/img/hotel-1-1-min.png" alt="JW Marriott Parq Vancouver").object-fit
+                        .swiper-slide
+                            .product-item__image
+                                img(src="/img/hotel-1-2-min.png" alt="JW Marriott Parq Vancouver").object-fit
+                        .swiper-slide
+                            .product-item__image
+                                img(src="/img/hotel-1-3-min.png" alt="JW Marriott Parq Vancouver").object-fit
+                        .swiper-slide
+                            .product-item__image
+                                img(src="/img/hotel-1-4-min.png" alt="JW Marriott Parq Vancouver").object-fit
+                    .swiper-pagination.product-item__pagination
+                    .swiper-button-prev.product-item__prev
+                    .swiper-button-next.product-item__next
+            .product-item__content
+                .product-item__top
+                    span.product-item__geo
+                        +icon('map')
+                        | Vancouver, British Columbia
+                    a(href="#").product-item__title.title.title_small JW Marriott Parq Vancouver
+                .product-item__info
+                    .product-item__col
+                        strong.product-item__number 4.98
+                        span.product-item__text Rating
+                    .product-item__col
+                        strong.product-item__number 2390
+                        span.product-item__text Reviews
+                    .product-item__col
+                        strong.product-item__number A$ 169.00
+                        span.product-item__text Per night
+                +btn('./product.html').product-item__btn Learn more
+        .product-item
+            .product-item__gallery
+                .product-item__slider.swiper.js-slider(data-settings=productSlider)
+                    .swiper-wrapper
+                        .swiper-slide
+                            .product-item__image
+                                img(src="/img/hotel-1-1-min.png" alt="JW Marriott Parq Vancouver").object-fit
+                        .swiper-slide
+                            .product-item__image
+                                img(src="/img/hotel-1-2-min.png" alt="JW Marriott Parq Vancouver").object-fit
+                        .swiper-slide
+                            .product-item__image
+                                img(src="/img/hotel-1-3-min.png" alt="JW Marriott Parq Vancouver").object-fit
+                        .swiper-slide
+                            .product-item__image
+                                img(src="/img/hotel-1-4-min.png" alt="JW Marriott Parq Vancouver").object-fit
+                    .swiper-pagination.product-item__pagination
+                    .swiper-button-prev.product-item__prev
+                    .swiper-button-next.product-item__next
+            .product-item__content
+                .product-item__top
+                    span.product-item__geo
+                        +icon('map')
+                        | Vancouver, British Columbia
+                    a(href="#").product-item__title.title.title_small JW Marriott Parq Vancouver
+                .product-item__info
+                    .product-item__col
+                        strong.product-item__number 4.98
+                        span.product-item__text Rating
+                    .product-item__col
+                        strong.product-item__number 2390
+                        span.product-item__text Reviews
+                    .product-item__col
+                        strong.product-item__number A$ 169.00
+                        span.product-item__text Per night
+                +btn('./product.html').product-item__btn Learn more
+        .product-item
+            .product-item__gallery
+                .product-item__slider.swiper.js-slider(data-settings=productSlider)
+                    .swiper-wrapper
+                        .swiper-slide
+                            .product-item__image
+                                img(src="/img/hotel-1-1-min.png" alt="JW Marriott Parq Vancouver").object-fit
+                        .swiper-slide
+                            .product-item__image
+                                img(src="/img/hotel-1-2-min.png" alt="JW Marriott Parq Vancouver").object-fit
+                        .swiper-slide
+                            .product-item__image
+                                img(src="/img/hotel-1-3-min.png" alt="JW Marriott Parq Vancouver").object-fit
+                        .swiper-slide
+                            .product-item__image
+                                img(src="/img/hotel-1-4-min.png" alt="JW Marriott Parq Vancouver").object-fit
+                    .swiper-pagination.product-item__pagination
+                    .swiper-button-prev.product-item__prev
+                    .swiper-button-next.product-item__next
+            .product-item__content
+                .product-item__top
+                    span.product-item__geo
+                        +icon('map')
+                        | Vancouver, British Columbia
+                    a(href="#").product-item__title.title.title_small JW Marriott Parq Vancouver
+                .product-item__info
+                    .product-item__col
+                        strong.product-item__number 4.98
+                        span.product-item__text Rating
+                    .product-item__col
+                        strong.product-item__number 2390
+                        span.product-item__text Reviews
+                    .product-item__col
+                        strong.product-item__number A$ 169.00
+                        span.product-item__text Per night
+                +btn('./product.html').product-item__btn Learn more
+        .product-item
+            .product-item__gallery
+                .product-item__slider.swiper.js-slider(data-settings=productSlider)
+                    .swiper-wrapper
+                        .swiper-slide
+                            .product-item__image
+                                img(src="/img/hotel-1-1-min.png" alt="JW Marriott Parq Vancouver").object-fit
+                        .swiper-slide
+                            .product-item__image
+                                img(src="/img/hotel-1-2-min.png" alt="JW Marriott Parq Vancouver").object-fit
+                        .swiper-slide
+                            .product-item__image
+                                img(src="/img/hotel-1-3-min.png" alt="JW Marriott Parq Vancouver").object-fit
+                        .swiper-slide
+                            .product-item__image
+                                img(src="/img/hotel-1-4-min.png" alt="JW Marriott Parq Vancouver").object-fit
+                    .swiper-pagination.product-item__pagination
+                    .swiper-button-prev.product-item__prev
+                    .swiper-button-next.product-item__next
+            .product-item__content
+                .product-item__top
+                    span.product-item__geo
+                        +icon('map')
+                        | Vancouver, British Columbia
+                    a(href="#").product-item__title.title.title_small JW Marriott Parq Vancouver
+                .product-item__info
+                    .product-item__col
+                        strong.product-item__number 4.98
+                        span.product-item__text Rating
+                    .product-item__col
+                        strong.product-item__number 2390
+                        span.product-item__text Reviews
+                    .product-item__col
+                        strong.product-item__number A$ 169.00
+                        span.product-item__text Per night
+                +btn('./product.html').product-item__btn Learn more

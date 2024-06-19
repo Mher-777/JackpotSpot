@@ -1,0 +1,48 @@
+.services {
+  background-color: var(--color-white);
+  padding: 1.6rem 1.6rem 4.8rem;
+  border-radius: 3.2rem 3.2rem 0 0;
+  margin-top: -3.2rem;
+  position: relative;
+  z-index: 1;
+
+  &__top {
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  &__desc {
+    opacity: 0.7;
+    font-size: 2.4rem;
+
+    @include large-tablet {
+      font-size: 2rem;
+    }
+
+    @include large-mobile {
+      @include line-height(16, 19);
+    }
+  }
+
+  &__items {
+    gap: 1.6rem;
+    @include large-mobile {
+      gap: .8rem;
+    }
+    & > * {
+      flex: 1 1 calc(33.33333333% - 1.6rem);
+
+      @include large-tablet {
+        flex: 1 1 calc(50% - 1.6rem);
+      }
+
+      @include large-mobile {
+        flex: 1 1 calc(100% - .8rem);
+      }
+    }
+  }
+}

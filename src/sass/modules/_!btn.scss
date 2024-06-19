@@ -1,0 +1,60 @@
+.btn {
+  font-size: 1.4rem;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border-radius: 0.8rem;
+  min-width: 10rem;
+  padding: 1rem 1.6rem;
+  transition: 0.3s ease-out;
+  overflow: hidden;
+  position: relative;
+  font-weight: 500;
+  cursor: pointer;
+  min-height: 4rem;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: -0.056rem;
+  line-height: 1em;
+  border-color: transparent;
+  &__back {
+    position: absolute;
+    left: -0.3rem;
+    top: -0.3rem;
+    right: -0.3rem;
+    bottom: -0.3rem;
+    border-radius: inherit;
+    overflow: hidden;
+    -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+  }
+
+  &__text {
+    position: relative;
+    z-index: 4;
+  }
+
+  &_white {
+    background-color: transparent;
+    color: var(--color-bg);
+    .b-circle {
+      display: none;
+    }
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+
+  &_black {
+    background-color: transparent;
+    color: var(--color-white);
+    .b-circle {
+      display: none;
+    }
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+}
